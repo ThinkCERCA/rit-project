@@ -106,7 +106,7 @@ def readingLevel(score, dataRIT):
     for grade in dataRIT[1:]:
         if score < grade[3]:
             return grade[0]
-        else: return dataRIT[-1][0] #if score/reading level is too high, change grade to 11
+        #else: return dataRIT[-1][0] #if score/reading level is too high, change grade to 11
 
 
 
@@ -135,6 +135,9 @@ standardRITScore = standardRIT[gradeInput-2][1]
 if ritInput < standardRITScore:
     readingGrade = int(readingLevel(ritInput, standardRIT))
 
+
+
+#print (ritInput, gradeInput, readingGrade)
 #############################
 #  Output Below             #
 #############################

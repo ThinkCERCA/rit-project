@@ -9,6 +9,14 @@ exec("python calculations.py ".$_GET["grade"]." ".$_GET["baserit"], $output);
 ?>
 
 <html>
+
+<head>
+  <title>ThinkCERCA RIT Score Calculator</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
 <body>
 
       <div style="width: 40%;">
@@ -54,9 +62,8 @@ exec("python calculations.py ".$_GET["grade"]." ".$_GET["baserit"], $output);
                 scales:{
                   yAxes:[{
                     ticks:{
-                      beginAtZero: false,
+                      beginAtZero: true,
                       max: 12,
-                      min: 4,
                       stepSize: 2
                     }
                   }]
@@ -72,4 +79,40 @@ exec("python calculations.py ".$_GET["grade"]." ".$_GET["baserit"], $output);
 
 
 </body>
+<br>
+
+<div class="container-fluid bg-grey">
+  <div class="row">
+    <div class="col-sm-7">
+      <h2>Learn how we can make this happen in your classrooms.</h2>
+      <div class="row">
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+        </div>
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+        </div>
+      </div>
+      <textarea class="form-control" id="comments" name="message" placeholder="Message" rows="5"></textarea><br>
+      <div class="row">
+        <div class="col-sm-12 form-group">
+          <button class="btn btn-default pull-right" type="submit">Send</button>
+        </div>
+      </div>
+
+
+    </div><br>
+    <div class="col-sm-7">
+
+      <p><span class="glyphicon glyphicon-map-marker"></span> Chicago, US</p>
+      <p><span class="glyphicon glyphicon-phone"></span> (408) 215 - 8610</p>
+      <p><span class="glyphicon glyphicon-envelope"></span> katy@thinkCERCA.com</p>
+
+
+
+    </div>
+  </div>
+</div>
+
+
 </html>
